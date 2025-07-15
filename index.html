@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>API</title>
+  </head>
+  <body class="bg-[#8FA8B7] basis-auto">
+    <div class="flex flex-col text-[#F9F9F9] items-center justify-center h-screen gap-5">
+      <input type="search" class="placeholder:text-grey placeholder:italic self-center bg-[#324A52] max-w-xs rounded-lg px-5 py-2 focus, active:bg-[#324A52]" id="search-user" placeholder="Search Username" />
+      <div class="flex flex-row gap-5">
+        <div class="flex flex-col items-center w-sm gap-5 p-4 rounded-lg bg-[#324A52]">
+          <h1 class="text-2xl font-bold">User</h1>
+          <p class="italic font-bold" id="player-name"></p>
+          <img class="w-45 h-45 rounded-[50%]" id="player-avatar" src="" alt="" />
+          <p id="user-country"></p>
+          <p class="italic" id="joined-date"></p>
+        </div>
+        <div class="flex flex-col items-center w-sm gap-5 p-4 rounded-lg bg-[#324A52]">
+          <h1 class="text-2xl font-bold">Stats</h1>
+          <div class="flex flex-col gap-3">
+            <p class="text-md font-bold self-center">ELO Rating</p>
+            <div class="flex flex-row gap-5">
+              <div class="flex flex-col gap-5 rounded-lg bg-[#EB847A] p-2 text-center justify-center">
+                <div>
+                  <p class="font-bold">Rapid</p>
+                  <p class="font-mono" id="rating-rapid"></p>
+                </div>
+                <div>
+                  <p class="font-bold">Last Match</p>
+                  <p class="font-mono" id="last-match-rapid"></p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5 rounded-lg bg-[#EB847A] p-2 text-center justify-center">
+                <div>
+                  <p class="font-bold">Bullet</p>
+                  <p class="font-mono" id="rating-bullet"></p>
+                </div>
+                <div>
+                  <p class="font-bold">Last Match</p>
+                  <p class="font-mono" id="last-match-bullet"></p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5 rounded-lg bg-[#EB847A] p-2 text-center justify-center">
+                <div>
+                  <p class="font-bold">Blitz</p>
+                  <p class="font-mono" id="rating-blitz"></p>
+                </div>
+                <div>
+                  <p class="font-bold">Last Match</p>
+                  <p class="font-mono" id="last-match-blitz"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/api.js"></script>
+  </body>
+</html>
